@@ -76,7 +76,7 @@ h1 {
 }
 
 #mantra_sky_b {
-  left: 600px;
+  left: 500px;
   top: 110px;
 }
 
@@ -150,7 +150,6 @@ h1 {
 input::-webkit-input-placeholder {
   color: #ccc;
   font-style: italic;
-  text-shadow: 3px 3px 0 #333;
 }
 input:-moz-placeholder {
   color: #999;
@@ -173,18 +172,21 @@ input:-moz-placeholder {
   width: 600px;
 }
 
-#disclaimer em {
+#disclaimer a {
   font-weight: bold;
   opacity: 0.5;
   margin-right: -20px;
+  color: #749537;
+  text-decoration: none;
+  font-style: italic;
 }
 
 #hint {
-  font-size: 0.8em;
+  font-size: 0.7em;
   color: #749537;
   text-shadow: 1px 1px 0 #bdf25a;
-  padding-left: 0.5em;
-  padding-top: 2em;
+  padding-left: 1.0em;
+  padding-top: 2.3em;
 }
 
 #mantra_grass {
