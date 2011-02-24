@@ -93,7 +93,7 @@ h1 {
   font-size: 0.6em;
 }
 
-#signup {
+#signup_form {
   position: absolute;
   left: 410px;
   top: 170px;
@@ -104,7 +104,19 @@ h1 {
   border-radius: 0.5em;
 }
 
-#signup input {
+#current_step {
+  width: 290px;
+  height: 30px;
+}
+
+#spinner {
+  display: none;
+  position: absolute;
+  left: 150px;
+  top: 25px;
+}
+
+#signup_form input {
   width: 280px;
   border: 1px solid #eee;
   color: #999;
@@ -115,7 +127,7 @@ h1 {
   border-radius: 0.1em;
 }
 
-#signup span {
+#signup_form span {
   position: absolute;
   right: 3em;
   font-size: 0.55em;
@@ -123,13 +135,13 @@ h1 {
   display: block;
 }
 
-#signup span a {
+#signup_form span a {
   text-decoration: none;
   font-weight: bold;
   color: #85c6de;
 }
 
-#signup span a:hover {
+#signup_form span a:hover {
   text-decoration: none;
   font-weight: bold;
   color: #b4e3f4;
