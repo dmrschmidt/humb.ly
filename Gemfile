@@ -2,30 +2,43 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'pg', :group => :production
+gem 'mysql', :group => [:development, :test]
 
-gem 'pg'
+# authentication / authorization
+gem 'devise'
+gem "oa-oauth", :require => "omniauth/oauth"
+gem "cancan"
 
-# Use unicorn as the web server
-# gem 'unicorn'
+# helper gems
+gem 'responders'
+gem 'heroku', '1.17.17'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+# frontend gems
+gem 'haml', '3.0.25'
+gem 'haml-rails', '0.3.4', :group => :development
+gem 'jquery-rails', '>= 0.2.6'
 
-# To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-# gem 'ruby-debug'
-# gem 'ruby-debug19'
-
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
-
-# Bundle gems for the local environment. Make sure to
-# put test-only gems in this group so their generators
-# and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
+# the following gems are for testing
+group :development, :test do
+  # testing stuff
+  gem "rspec-rails", ">= 2.0.0"
+  gem 'rcov'
+  gem 'ruby-debug'
+  gem "cucumber-rails", ">= 0.3.2"
+  gem "webrat", ">= 0.7.2"
+  gem 'mocha'
+  gem "shoulda"
+  gem 'factory_girl_rails'
+  gem 'factory_girl'
+  gem 'ZenTest'
+  gem 'test_notifier'
+  gem 'autotest-rails'
+  gem 'autotest'
+  # scaffolding helper
+  gem 'flutie'
+  gem "nifty-generators"
+  # the folowing gems are used to generate Devise views for Haml
+  gem 'hpricot', '0.8.3'
+  gem 'ruby_parser', '2.0.5'
+end
