@@ -12,7 +12,7 @@
     - @signups.each do |signup|
       %tr
         %td= signup.mail
-        %td= signup.ip_address
+        %td= signup.ip
         %td= link_to 'Show', signup
         %td= link_to 'Edit', edit_signup_path(signup)
         %td= link_to 'Destroy', signup, :confirm => 'Are you sure?', :method => :delete

@@ -1,3 +1,5 @@
+require 'ipaddr'
+
 class SignupsController < ApplicationController
   before_filter :authenticate!, :except => [:new, :create]
   
@@ -31,7 +33,7 @@ class SignupsController < ApplicationController
   # POST /signups.xml
   def create
     # sleep 1 # only for local slow-internet simulation
-    params[:signup].update(:ip_address => request.remote_ip)
+    params[:signup].update(:ip_address => IPAddr.new(request.remote_ip).to_i)
     @signup = Signup.new(params[:signup])
     flash[:notice] = 'Signup was successfully created.' if @signup.save
     respond_with(@signup, :layout => !request.xhr?)
