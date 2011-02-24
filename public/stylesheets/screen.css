@@ -8,3 +8,74 @@ html {
   font-size: 1.0em;
   color: #444;
 }
+
+body {
+  background-color: #a6ce39;
+}
+
+h1 {
+/*  text-shadow: 2px 2px 0px #fff;*/
+}
+
+#main {
+  position: relative;
+}
+
+#header {
+  background-color: #ecf8fe;
+  color: #ecf8fe;
+}
+
+#content {
+  padding-top: 80px;
+  height: 440px;
+  background-color: #ecf8fe;
+  position: relative;
+}
+
+#humblybee {
+
+}
+
+#humbly-text {
+  position: absolute;
+  left: 250px;
+  bottom: 400px;
+}
+
+#footer {
+  position: relative;
+  min-height: 72px;
+  background-color: #a6ce39;
+  background-image: url(../images/grass.png);
+  background-repeat: repeat-x;
+}
+
+.mantra_sky {
+  display: block;
+  position: absolute;
+  color: #b4e3f4;
+  font-weight: bold;
+/*  text-shadow: -1px -1px 0 #84a6b3;*/
+}
+
+#mantra_sky_a {
+  left: 230px;
+  top: 25px;
+}
+
+#mantra_sky_b {
+  left: 600px;
+  top: 110px;
+}
+
+#mantra_grass {
+/*  display: block;*/
+  display: none;
+  position: absolute;
+  left: 550px;
+  top: 10px;
+  color: #3c4d1c;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #c7ff5e;
+}
