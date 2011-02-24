@@ -27,6 +27,9 @@ h1 {
 }
 
 #content {
+  background-image: url(../images/humblybee.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
   padding-top: 80px;
   height: 440px;
   background-color: #ecf8fe;
@@ -37,18 +40,26 @@ h1 {
 
 }
 
+#bumblebees {
+  display: none;
+  position: absolute;
+  left: 350px;
+  top: 250px;
+  width: 200px;
+  height: 150px;
+}
+
+.bumblebee {
+  left: 0;
+  top: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
 #humbly-text {
   position: absolute;
   left: 250px;
   bottom: 400px;
-}
-
-#footer {
-  position: relative;
-  min-height: 72px;
-  background-color: #a6ce39;
-  background-image: url(../images/grass.png);
-  background-repeat: repeat-x;
 }
 
 .mantra_sky {
@@ -67,6 +78,101 @@ h1 {
 #mantra_sky_b {
   left: 600px;
   top: 110px;
+}
+
+#coming_soon {
+  position: absolute;
+  left: 35px;
+  top: 428px;
+  color: #d8d9db;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+#coming_soon em {
+  font-size: 0.6em;
+}
+
+#signup {
+  position: absolute;
+  left: 410px;
+  top: 170px;
+  background-color: #fff;
+  padding: 1em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em;
+}
+
+#signup input {
+  width: 280px;
+  border: 1px solid #eee;
+  color: #999;
+  font-size: 1.3em;
+  padding: 0.1em;
+  -moz-border-radius: 0.1em;
+  -webkit-border-radius: 0.1em;
+  border-radius: 0.1em;
+}
+
+#signup span {
+  position: absolute;
+  right: 3em;
+  font-size: 0.55em;
+  color: #bbb;
+  display: block;
+}
+
+#signup span a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #85c6de;
+}
+
+#signup span a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #b4e3f4;
+}
+
+input::-webkit-input-placeholder {
+  color: #ccc;
+  font-style: italic;
+  text-shadow: 3px 3px 0 #333;
+}
+input:-moz-placeholder {
+  color: #999;
+}
+
+#footer {
+  position: relative;
+  min-height: 72px;
+  background-color: #a6ce39;
+  background-image: url(../images/grass.png);
+  background-repeat: repeat-x;
+}
+
+#disclaimer {
+  text-align: right;
+  font-size: 0.8em;
+  color: #749537;
+  text-shadow: 1px 1px 0 #c7ff5e;
+  padding-top: 5px;
+  width: 600px;
+}
+
+#disclaimer em {
+  font-weight: bold;
+  opacity: 0.5;
+  margin-right: -20px;
+}
+
+#hint {
+  font-size: 0.8em;
+  color: #749537;
+  text-shadow: 1px 1px 0 #bdf25a;
+  padding-left: 0.5em;
+  padding-top: 2em;
 }
 
 #mantra_grass {
