@@ -15,7 +15,7 @@ development:
   database: humb.ly_development
   pool: 5
   username: root
-  password:
+  password: trowssap
   socket: /tmp/mysql.sock
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,7 +43,7 @@ test:
   database: humb.ly_test
   pool: 5
   username: root
-  password:
+  password: trowssap
   socket: /tmp/mysql.sock
 
 production:

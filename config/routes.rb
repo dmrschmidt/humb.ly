@@ -1,4 +1,6 @@
 HumbLy::Application.routes.draw do
+  resources :signups
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
