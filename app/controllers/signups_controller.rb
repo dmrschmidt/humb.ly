@@ -31,6 +31,7 @@ class SignupsController < ApplicationController
   # POST /signups.xml
   def create
     # sleep 1 # only for local slow-internet simulation
+    params[:signup].update(:ip_address => request.remote_ip)
     @signup = Signup.new(params[:signup])
     flash[:notice] = 'Signup was successfully created.' if @signup.save
     respond_with(@signup, :layout => !request.xhr?)

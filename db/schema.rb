@@ -10,12 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110224093519) do
+ActiveRecord::Schema.define(:version => 20110224133808) do
 
   create_table "signups", :force => true do |t|
     t.string   "mail"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "ip_address"
   end
 
 end

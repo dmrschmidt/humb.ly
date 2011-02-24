@@ -1,6 +1,6 @@
 = form_for @signup, :remote => true do |f|
   %div#current_step
-    %img#spinner{:src => "./images/spinner.gif", :width => 16, :height => 16, :alt => "sending..."}
+    %img#spinner{:src => "/images/spinner.gif", :width => 16, :height => 16, :alt => "sending..."}
     = f.text_field :mail, :placeholder => "your mail address"
     / = f.submit 'Save'
     %span

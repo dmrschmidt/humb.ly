@@ -1,19 +1,22 @@
-%h1 Listing signups
-
-%table
-  %tr
-    %th Mail
-    %th
-    %th
-    %th
-
-  - @signups.each do |signup|
+%div#rails
+  %h1 Listing signups
+  
+  %table
     %tr
-      %td= signup.mail
-      %td= link_to 'Show', signup
-      %td= link_to 'Edit', edit_signup_path(signup)
-      %td= link_to 'Destroy', signup, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Signup', new_signup_path
+      %th Mail
+      %th IP
+      %th
+      %th
+      %th
+  
+    - @signups.each do |signup|
+      %tr
+        %td= signup.mail
+        %td= signup.ip_address
+        %td= link_to 'Show', signup
+        %td= link_to 'Edit', edit_signup_path(signup)
+        %td= link_to 'Destroy', signup, :confirm => 'Are you sure?', :method => :delete
+  
+  %br
+  
+  = link_to 'New Signup', new_signup_path
