@@ -1,8 +1,8 @@
 = form_for @signup, :remote => true do |f|
-  %div#current_step
+  %div#current_step.typewriter{:"data-cycling" => "false"}
     %img#spinner{:src => "/images/spinner.gif", :width => 16, :height => 16, :alt => "sending..."}
     = f.text_field :mail, :placeholder => "your mail address"
     / = f.submit 'Save'
     %span
       ="yeah, you caught me!"
-      %a#submitter= "Sign Up for updates."
+      %a#submitter{:href => ""}= "Sign Up for updates."

@@ -42,7 +42,11 @@ $(document).ready(function() {
   });
   $("#submitter").click(function(event) {
     event.preventDefault();
-    $("#new_signup").submit();
+    if($("#signup_mail").val()) {
+      $("#new_signup").submit();
+    } else {
+      $("#signup_mail").focus();
+    }
   });
 });
 
