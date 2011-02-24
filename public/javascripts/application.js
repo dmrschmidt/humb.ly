@@ -14,6 +14,8 @@ $(document).ready(function() {
    */
   $("#new_signup").hide();
   $("#bumblebees").show();
+  
+  // support HTML5 placeholder label in old browsers as well
   $('input:text[placeholder]').placeholderLabel();
   
   // get the maximum dimensions to move to for the bees
