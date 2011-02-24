@@ -14,6 +14,7 @@ $(document).ready(function() {
    */
   $("#new_signup").hide();
   $("#bumblebees").show();
+  $('input:text[placeholder]').placeholderLabel();
   
   // get the maximum dimensions to move to for the bees
   maxLeft = $("#bumblebees").width();
