@@ -1,0 +1,16 @@
+var el = $('#new_signup');
+
+<% if @signup.errors.any? %>
+
+  $('#current_step').html("<span class='answer sad'>you made humblybee sad :-(</span>");
+
+<% else %>
+
+  // We could also render a partial to display the comment here
+  $('#current_step').html("<span class='answer happy'>you made humblybee happy :-)</span>");
+
+  // Clear form
+  el.find('input:text,textarea').val('');
+  el.find('.errors').empty();
+
+<% end %>

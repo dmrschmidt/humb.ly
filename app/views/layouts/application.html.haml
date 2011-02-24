@@ -1,8 +1,28 @@
+!!!
 %html
   %head
     %title= "let's humb.ly do good every single day !"
     = stylesheet_link_tag :all
-    = javascript_include_tag :defaults, 'jquery.min', 'jquery.class', 'rails'
+    = javascript_include_tag :defaults, 'jquery.min', 'jquery.easing.min', 'jquery.class', 'rails'
     = csrf_meta_tag
   %body
-    = yield
+    %div#main
+      %div#content
+        %span.mantra_sky#mantra_sky_a= "let's"
+        %img#humbly-text{:src => "/images/text-logo.png", :width => 441, :height => 101, :alt => "humblybee"}
+        %span#mantra_sky_b.mantra_sky
+          ="do good"
+          %i= "every"
+          = "single day !"
+        %span#coming_soon= "coming soon..."
+      = yield
+      %div#bumblebees
+        %img.bumblebee{:src => "/images/bumblebee_left.png"}
+        %img.bumblebee{:src => "/images/bumblebee_right.png"}
+        %img.bumblebee{:src => "/images/bumblebee_left.png"}
+      %div#footer
+        %p#disclaimer
+          = "working on improving our society since 2011"
+          %br/
+          %a{:href => "http://de.linkedin.com/in/dmrschmidt"}= "Dennis Schmidt"
+        %p#hint= "why not try to catch a bumblebee?"

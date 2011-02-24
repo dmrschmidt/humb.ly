@@ -12,7 +12,7 @@ $(document).ready(function() {
    * with deactivated JS comes along).
    * Also, show the bees, since they will only be neat when they're animated.
    */
-  $("#signup_form").hide();
+  $("#new_signup").hide();
   $("#bumblebees").show();
   
   // get the maximum dimensions to move to for the bees
@@ -29,20 +29,20 @@ $(document).ready(function() {
     // and then let them fly
     $(bee).fly();
     // and if they get caught... display the signup page
-    $(bee).mousedown(function() { $("#signup_form").fadeIn("fast"); });
+    $(bee).mousedown(function() { $("#new_signup").fadeIn("fast"); });
   });
   
   /*
    * register our submit logic
    */
+  $("#new_signup").submit(function(event) {
+    $("#current_step span").hide();
+    $("#signup_mail").hide('fast');
+    $("#spinner").show('fast');
+  });
   $("#submitter").click(function(event) {
     event.preventDefault();
-    $(event.target).parent().hide();
-    $("#email").hide('fast');
-    $("#spinner").show('fast');
-    window.setTimeout("100", function() {
-      $("#spinner").hide('fast');
-    });
+    $("#new_signup").submit();
   });
 });
 

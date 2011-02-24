@@ -1,4 +1,6 @@
 class SignupsController < ApplicationController
+  before_filter :authenticate!, :except => [:new, :create]
+  
   # GET /signups
   # GET /signups.xml
   def index
@@ -28,9 +30,10 @@ class SignupsController < ApplicationController
   # POST /signups
   # POST /signups.xml
   def create
+    # sleep 1 # only for local slow-internet simulation
     @signup = Signup.new(params[:signup])
     flash[:notice] = 'Signup was successfully created.' if @signup.save
-    respond_with(@signup)
+    respond_with(@signup, :layout => !request.xhr?)
   end
 
   # PUT /signups/1
@@ -47,5 +50,12 @@ class SignupsController < ApplicationController
     @signup = Signup.find(params[:id])
     @signup.destroy
     respond_with(@signup)
+  end
+  
+  private
+  
+  def authenticate!
+    session[:authenticated] ||= request.GET.include?("auth_me")
+    render_404 unless session[:authenticated]
   end
 end
