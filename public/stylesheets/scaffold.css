@@ -148,6 +148,7 @@ h1 {
 #new_signup span {
   position: absolute;
   right: 3em;
+  bottom: 2px;
   font-size: 0.55em;
   color: #bbb;
   display: block;
