@@ -186,7 +186,12 @@ input::-webkit-input-placeholder {
   font-style: italic;
 }
 input:-moz-placeholder {
-  color: #999;
+  color: #ccc;
+  font-style: italic;
+}
+input.placeholder {
+  color: #ccc;
+  font-style: italic;
 }
 
 #footer {
