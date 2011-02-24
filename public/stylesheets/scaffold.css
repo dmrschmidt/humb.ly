@@ -197,15 +197,17 @@ input:-moz-placeholder {
 }
 
 #disclaimer {
-  text-align: right;
+  text-align: left;
   font-size: 0.8em;
   color: #749537;
   text-shadow: 1px 1px 0 #c7ff5e;
   padding-top: 5px;
   width: 600px;
+  padding-left: 390px;
 }
 
 #disclaimer a {
+  padding-left: 130px;
   font-weight: bold;
   opacity: 0.5;
   margin-right: -20px;
