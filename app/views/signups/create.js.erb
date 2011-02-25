@@ -3,11 +3,15 @@ var el = $('#new_signup');
 <% if @signup.errors.any? %>
 
   $('#current_step').html("<span class='answer sad'>you made humblybee sad :-(</span>");
+  // break the egg and prevent further submit attempts
+  $('#easteregg').attr('src', "/images/egg_broken.png");
+  $('#easteregg').click(function(event){ event.preventDefault(); });
 
 <% else %>
 
-  // We could also render a partial to display the comment here
+  // show our appreviation and hide the egg
   $('#current_step').html("<span class='answer happy'>you made humblybee happy :-)</span>");
+  $('#easteregg').hide();
 
   // Clear form
   el.find('input:text,textarea').val('');
