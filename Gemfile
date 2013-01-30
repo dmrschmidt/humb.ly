@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails', '3.0.20'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -27,7 +27,7 @@ group :development, :test do
   # testing stuff
   gem "rspec-rails", ">= 2.0.0"
   gem 'rcov'
-  gem 'ruby-debug'
+  # gem 'ruby-debug'
   gem "cucumber-rails", ">= 0.3.2"
   gem "webrat", ">= 0.7.2"
   gem 'mocha'
